@@ -14,3 +14,5 @@
 - Throwing eggs
 - Add Oil
 - Take damage when inside blocks
+- Fix creative inventory to not overstack items
+- Bucket sounds
