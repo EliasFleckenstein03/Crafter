@@ -15,7 +15,7 @@ local player_skin
 local armor_skin
 local stack
 local skin_element
-function recalculate_armor(player)
+function recalculate_armor(player, reload_inv)
     
     if not player or (player and not player:is_player()) then return end
 
@@ -48,6 +48,12 @@ function recalculate_armor(player)
         armor_skin = armor_skin.."^"..skin_element
     end
     player:set_properties({textures = {player_skin,armor_skin}})
+    
+    if reload_inv then
+		inventory.reload(player)
+	else
+		inventory.set(player)
+	end
 end
 
 local inv
@@ -216,7 +222,7 @@ local acceptable = {
 minetest.register_on_player_inventory_action(function(player, action, inventory, inventory_info)
     if acceptable[inventory_info.from_list] or acceptable[inventory_info.to_list] then
         minetest.after(0,function()
-            recalculate_armor(player)
+            recalculate_armor(player, true)
             set_armor_gui(player)
         end)
     end

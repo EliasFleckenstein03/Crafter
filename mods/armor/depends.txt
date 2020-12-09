@@ -1,3 +1,4 @@
 skins
 player_api
 new_functions
+inventory

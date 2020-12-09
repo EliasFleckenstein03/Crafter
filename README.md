@@ -35,6 +35,8 @@ max_packets_per_iteration = 10096
 ## Alpha 0.07
 > RailRoad Tech
 
+- Added Suffocation
+- The /home command requires a priv now
 - Added in better minecart algorithm
 - Added in ability to link minecarts
 - Added in train wrench

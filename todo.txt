@@ -7,7 +7,7 @@
 - Sprinting
 - Rebalancing of ore generation probabilities and tool speeds
 - More sophisticated particle effects
-- Season effects (only affecting audiovisuals)
+- Season effects (only affecting audiovisuals like textures and music)
 - Add two new biomes, each with individual trees, exclusive mobs and structures and a boss fight
 - Fix creative inventory to not overstack items
 - Add Oil

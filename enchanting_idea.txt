@@ -1,0 +1,13 @@
+Enchanting System
+-----------------
+
+My idea for an enchanting system is to introduce runes. Runes work similar to enchanted books in Minecraft: They hold a specific enchantment and they can be applied to an item.
+To create a specific rune, (e.g. the "Luck" rune) you need to obtain 3 items determined by the enchanting recipe for that rune (e.g rabbit's paw, a rare rabbit drop, clover, 
+a plant that has a small chance of getting generated and a horseshoe, craftable using iron) using an artifact. An artifact is a rare structure that has a type and a level, the
+type depends on the biome the artifact was generated in (e.g. Snow Artifact in the Snowy biome) and the level depends on the distance to spawn as well as a good portion of luck.
+Artifacts generate destroyed, meaning that you'll need a random amount of ressources (gold, ruby, emerald, etc.) to repair it. Artifacts with higher levels require more ressources.
+The level of the rune depends on the level of the artifact. To melt items together a special fuel is required; maybe something from the nether (like blaze dust or glowstone).
+Every artifact only supports certain runes (e.g to get the fire rune which works like fire aspect you'll need to find a Nether Artifact). To apply a rune to an item you'll need
+to place the rune into the world, activate it by rightclicking it (costs xp levels!) and then drop an item on top of it. After 30 seconds or so (and some spooky noises) the rune
+explodes and the item is thrown out of it. The rune has a small (!!) chance to drop and level up by an insane amount (like times 10).
+All in all, enchantments are not easy to get, so their effect should be pretty OP.
