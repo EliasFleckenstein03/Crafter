@@ -1,4 +1,4 @@
-<img src="https://github.com/oilboi/Crafter/blob/master/menu/header.png">
+<img src="https://github.com/EliasFleckenstein03/Crafter/blob/master/menu/header.png">
 
 > Designed for Minetest 5.3.0-DEV
 
@@ -30,7 +30,7 @@ max_packets_per_iteration = 10096
 
 # ALPHA STATE CHANGELOG
 
-> <a href="https://github.com/oilboi/Crafter/blob/master/old_changelog.md">Old Version Changelogs</a>
+> <a href="https://github.com/EliasFleckenstein03/Crafter/blob/master/old_changelog.md">Old Version Changelogs</a>
 
 ## Alpha 0.07
 > RailRoad Tech
