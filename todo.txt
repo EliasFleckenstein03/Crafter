@@ -1,18 +1,17 @@
+- Dont show cheat button if priv is missing
+- Take damage when inside blocks
+- Bucket sounds
+- Background images for armor in inventory
 - Equip armor with rightclick
 - Shift-click fuel into furnace
+- Throwing eggs
 - 3d person visuals: Fix invalid rotation of wield tools
-- Dont show cheat button if priv is missing
-- Background images for armor in inventory
-- Add two new biomes, each with individual trees, exclusive mobs and structures and a boss fight
 - Sprinting
-- Refactor bows mod to not save things in player meta
 - Rebalancing of ore generation probabilities and tool speeds
-- Rework enchanting system
-- Add Redstone Breaker
 - More sophisticated particle effects
 - Season effects (only affecting visuals)
-- Throwing eggs
-- Add Oil
-- Take damage when inside blocks
+- Add two new biomes, each with individual trees, exclusive mobs and structures and a boss fight
 - Fix creative inventory to not overstack items
-- Bucket sounds
+- Add Oil
+- Add Redstone Breaker
+- Rework enchanting system

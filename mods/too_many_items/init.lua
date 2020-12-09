@@ -168,9 +168,11 @@ end
 
 local function cheat_button(name)
 	if pool[name] and pool[name].cheating then
-		return("button[11.5,7.6;2,2;toomanyitems.cheat;cheat:on]")
+		return "button[11.5,7.6;2,2;toomanyitems.cheat;cheat:on]"
+	elseif minetest.check_player_privs(name, {give = true}) then
+		return "button[11.5,7.6;2,2;toomanyitems.cheat;cheat:off]"
 	else
-		return("button[11.5,7.6;2,2;toomanyitems.cheat;cheat:off]")
+		return ""
 	end
 end
 
