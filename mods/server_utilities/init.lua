@@ -10,7 +10,7 @@ local home_timeout = 60
 minetest.register_chatcommand("sethome", {
 	params = "nil",
 	description = "Use this to set your home. Can be returned to by setting /home",
-	privs = {},
+	privs = {home = true},
 	func = function(name)
 		local time = minetest.get_us_time()/1000000
 		local player = minetest.get_player_by_name(name)
@@ -34,7 +34,7 @@ minetest.register_chatcommand("sethome", {
 minetest.register_chatcommand("home", {
 	params = "nil",
 	description = "Use this to set your home. Can be returned to by setting /home",
-	privs = {},
+	privs = {home = true},
 	func = function(name)
 		local time = minetest.get_us_time()/1000000
 		local player = minetest.get_player_by_name(name)
@@ -59,4 +59,9 @@ minetest.register_chatcommand("home", {
 			minetest.chat_send_player(name, diff.." more second"..s.." until you can run that command.")
 		end
 	end,
+})
+
+minetest.register_privilege("home", {
+	description = "Player can use /home and /sethome.",
+	give_to_singleplayer = false,
 })
