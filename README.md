@@ -6,7 +6,7 @@
 
 ---
 
-## Be sure to install the clientside mod for this game mode: <a href="https://github.com/oilboi/crafter_client">Download here</a>
+## Be sure to install the clientside mod for this game mode: <a href="https://github.com/EliasFleckenstein03/crafter_client">Download here</a>
 
 
 
@@ -35,7 +35,10 @@ max_packets_per_iteration = 10096
 ## Alpha 0.07
 > RailRoad Tech
 
-- Added Suffocation
+- Warning when clientmod is not installed
+- Bucket sounds
+- Inventory improvements
+- Added suffocation
 - The /home command requires a priv now
 - Added in better minecart algorithm
 - Added in ability to link minecarts

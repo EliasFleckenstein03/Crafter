@@ -43,10 +43,12 @@ minetest.register_craftitem("main:bucket", {
 		if node == "main:water" then
 			itemstack:replace(ItemStack("main:bucket_water"))
 			minetest.remove_node(pos_under)
+			minetest.sound_play("water_take", {gain=1.0, pos = pos_under, pitch = 1 + math.random(-10, 10)*0.005}, true)
 			return(itemstack)
 		elseif node == "main:lava" or node == "nether:lava" then
 			itemstack:replace(ItemStack("main:bucket_lava"))
 			minetest.remove_node(pos_under)
+			minetest.sound_play("lava", {gain=1.0, pos = pos_under, pitch = 1 + math.random(-10, 10)*0.005}, true)
 			return(itemstack)
 		end
 	end,
@@ -62,10 +64,12 @@ minetest.register_craftitem("main:bucket", {
 		if node == "main:water" then
 			itemstack:replace(ItemStack("main:bucket_water"))
 			minetest.remove_node(pos_under)
+			minetest.sound_play("water_take", {gain=1.0, pos = pos_under, pitch = 1 + math.random(-10, 10)*0.005}, true)
 			return(itemstack)
 		elseif node == "main:lava" or node == "nether:lava" then
 			itemstack:replace(ItemStack("main:bucket_lava"))
 			minetest.remove_node(pos_under)
+			minetest.sound_play("lava", {gain=1.0, pos = pos_under, pitch = 1 + math.random(-10, 10)*0.005}, true)
 			return(itemstack)
 		end
 	end,
@@ -97,12 +101,15 @@ minetest.register_craftitem("main:bucket_water", {
 		if buildable_under == true then
 			minetest.set_node(pos_under,{name="main:water"})
 			itemstack:replace(ItemStack("main:bucket"))
+			minetest.sound_play("water_place", {gain=1.0, pos = pos_under, pitch = 1 + math.random(-10, 10)*0.005}, true)
 			return(itemstack)
 		elseif buildable_above then
 			minetest.set_node(pos_above,{name="main:water"})
 			itemstack:replace(ItemStack("main:bucket"))
+			minetest.sound_play("water_place", {gain=1.0, pos = pos_above, pitch = 1 + math.random(-10, 10)*0.005}, true)
 			return(itemstack)
 		end
+		
 	end,
 	on_secondary_use = function(itemstack, user, pointed_thing)
 		local pos = bucket_raycast(user)
@@ -124,10 +131,12 @@ minetest.register_craftitem("main:bucket_water", {
 		if buildable_under == true then
 			minetest.add_node(pos_under,{name="main:water"})
 			itemstack:replace(ItemStack("main:bucket"))
+			minetest.sound_play("water_place", {gain=1.0, pos = pos_under, pitch = 1 + math.random(-10, 10)*0.005}, true)
 			return(itemstack)
 		elseif buildable_above then
 			minetest.add_node(pos_above,{name="main:water"})
 			itemstack:replace(ItemStack("main:bucket"))
+			minetest.sound_play("water_place", {gain=1.0, pos = pos_above, pitch = 1 + math.random(-10, 10)*0.005}, true)
 			return(itemstack)
 		end
 	end,
@@ -171,6 +180,7 @@ minetest.register_craftitem("main:bucket_lava", {
 					minetest.add_node(pos_under,{name="nether:lava"})
 				end
 				itemstack:replace(ItemStack("main:bucket"))
+				minetest.sound_play("lava", {gain=1.0, pos = pos_under, pitch = 1 + math.random(-10, 10)*0.005}, true)
 				return(itemstack)
 			end
 		elseif buildable_above then
@@ -181,6 +191,7 @@ minetest.register_craftitem("main:bucket_lava", {
 					minetest.add_node(pos_above,{name="nether:lava"})
 				end
 				itemstack:replace(ItemStack("main:bucket"))
+				minetest.sound_play("lava", {gain=1.0, pos = pos_above, pitch = 1 + math.random(-10, 10)*0.005}, true)
 				return(itemstack)
 			end
 		end
@@ -210,6 +221,7 @@ minetest.register_craftitem("main:bucket_lava", {
 					minetest.add_node(pos_under,{name="nether:lava"})
 				end
 				itemstack:replace(ItemStack("main:bucket"))
+				minetest.sound_play("lava", {gain=1.0, pos = pos_under, pitch = 1 + math.random(-10, 10)*0.005}, true)
 				return(itemstack)
 			end
 		elseif buildable_above then
@@ -220,6 +232,7 @@ minetest.register_craftitem("main:bucket_lava", {
 					minetest.add_node(pos_above,{name="nether:lava"})
 				end
 				itemstack:replace(ItemStack("main:bucket"))
+				minetest.sound_play("lava", {gain=1.0, pos = pos_above, pitch = 1 + math.random(-10, 10)*0.005}, true)
 				return(itemstack)
 			end
 		end

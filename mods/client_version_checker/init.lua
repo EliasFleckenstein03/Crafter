@@ -2,6 +2,7 @@ minetest.register_node("client_version_checker:this_is_the_signature_of_crafter0
 
 local client_versions = {}
 local client_version_channels = {}
+local client_has_clientmod = {}
 
 --I needed to add in a dev cycle to adopt for a decimal place error
 local current_development_cycle = "alpha"
@@ -10,11 +11,22 @@ local current_version = 0.07000
 minetest.register_on_joinplayer(function(player)
 	local name = player:get_player_name()
     client_version_channels[name] = minetest.mod_channel_join(name..":client_version_channel")
+    client_has_clientmod[name] = nil
+    minetest.after(3, function()
+		if not client_has_clientmod[name] then
+			minetest.chat_send_player(name, minetest.colorize("orange", "It seems like you don't have Crafter client installed."
+				.. " You will not be able to use all features of this server without the clientmod."
+				.. " Please dowload it here: https://github.com/EliasFleckenstein03/crafter_client"))
+		else
+			client_has_clientmod[name] = nil
+		end
+    end)
 end)
 
 minetest.register_on_modchannel_message(function(channel_name, sender, message)
     local channel_decyphered = channel_name:gsub(sender,"")
     if channel_decyphered == ":client_version_channel" then
+		client_has_clientmod[sender] = true
         local version = tonumber(message)
         if type(version) ~= "number" then
             minetest.chat_send_player(sender, minetest.colorize("yellow", "Please do not try to crash the server."))

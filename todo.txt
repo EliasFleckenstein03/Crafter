@@ -1,5 +1,3 @@
-- Bucket sounds
-- Background images for armor in inventory
 - Equip armor with rightclick
 - Shift-click fuel into furnace
 - Throwing eggs
