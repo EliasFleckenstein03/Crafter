@@ -12,13 +12,13 @@ minetest.register_on_joinplayer(function(player)
 	local name = player:get_player_name()
     client_version_channels[name] = minetest.mod_channel_join(name..":client_version_channel")
     client_has_clientmod[name] = nil
-    minetest.after(3, function()
-		if not client_has_clientmod[name] then
+    minetest.after(5, function()
+		if client_has_clientmod[name] then
+			client_has_clientmod[name] = nil
+		else
 			minetest.chat_send_player(name, minetest.colorize("orange", "It seems like you don't have Crafter client installed."
 				.. " You will not be able to use all features of this server without the clientmod."
 				.. " Please dowload it here: https://github.com/EliasFleckenstein03/crafter_client"))
-		else
-			client_has_clientmod[name] = nil
 		end
     end)
 end)

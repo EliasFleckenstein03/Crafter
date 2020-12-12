@@ -117,7 +117,7 @@ local output_constant =
 "button[5,3.5;1,1;inventory.back;back]" --back button
 local output
 local recipe
-local usable_recipe
+local usable_table
 local function create_craft_formspec(item)
 	--don't do air
 	if item == "" then
@@ -279,7 +279,7 @@ minetest.register_on_player_receive_fields(function(player, formname, fields)
 		else
 			craft_inv = create_craft_formspec(item)
 			if craft_inv and craft_inv ~= "" then
-				minetest.show_formspec(name, id, empty_armor_slots(player)..tmi_master_inventory["page_"..temp_pool.page]..craft_inv..cheat_button(name))
+				minetest.show_formspec(name, id, tmi_master_inventory["page_"..temp_pool.page]..craft_inv..cheat_button(name))
 				minetest.sound_play("lever", {to_player = name,gain=0.7})
 			end
 		end

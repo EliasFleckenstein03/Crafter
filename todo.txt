@@ -1,8 +1,6 @@
 - Equip armor with rightclick
 - Shift-click fuel into furnace
 - Throwing eggs
-- 3d person visuals: Fix invalid rotation of wield tools
-- Sprinting
 - Rebalancing of ore generation probabilities and tool speeds
 - More sophisticated particle effects
 - Season effects (only affecting audiovisuals like textures and music)

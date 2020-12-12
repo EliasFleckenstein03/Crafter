@@ -48,7 +48,7 @@ local update_wield_item = function(player)
 			
 			entity.wielder = name
 			
-			object:set_attach(player, "Right_Hand", vector.new(0,0,0), vector.new(0,0,0))
+			object:set_attach(player, "Right_Hand", vector.new(0,0,0), vector.new(0, 0, 0))
 			
 			temp_pool.wield_item = object
 		end
@@ -422,12 +422,27 @@ local set_item = function(self, item)
 	itemname = stack:is_known() and stack:get_name() or "unknown"
 
 	def = minetest.registered_nodes[itemname]
+	tooldef = minetest.registered_tools[itemname]
 
 	self.object:set_properties({
 		textures = {itemname},
 		wield_item = self.itemstring,
 		glow = def and def.light_source,
 	})
+	
+	local parent, bone, offset, rotation, forced_visible = self.object:get_attach()
+	
+	if not parent then
+		return
+	end
+	
+	if tooldef then
+		rotation = vector.new(90, 45, 90)
+	else
+		rotation = vector.new(0, 0, 0)
+	end
+	
+	self.object:set_attach(parent, bone, offset, rotation, forced_visible)
 end
 
 minetest.register_entity("player_api:item", {
