@@ -1,11 +1,9 @@
+- Music depending on season
 - Equip armor with rightclick
 - Shift-click fuel into furnace
 - Throwing eggs
 - Rebalancing of ore generation probabilities and tool speeds
 - More sophisticated particle effects
-- Season effects (only affecting audiovisuals like textures and music)
 - Add two new biomes, each with individual trees, exclusive mobs and structures and a boss fight
-- Fix creative inventory to not overstack items
 - Add Oil
-- Add Redstone Breaker
 - Rework enchanting system

@@ -220,7 +220,7 @@ minetest.register_node("main:dirt", {
 
 minetest.register_node("main:grass", {
     description = "Grass",
-    tiles = {"grass.png"},
+    tiles = season.pick({"grass_spring.png", "grass.png"}, {"grass.png"}, {"leaves_ground.png"}, {"snow.png"}),
     groups = {grass = 1, soil=1,pathable = 1, farm_tillable=1},
     sounds = main.dirtSound(),
     drop="main:dirt",
@@ -364,7 +364,7 @@ minetest.register_node("main:leaves", {
 	climbable = true,
 	paramtype = "light",
 	is_ground_content = false,	
-    tiles = {"leaves.png"},
+    tiles = {season.pick("leaves_spring.png", "leaves.png", "leaves_dry.png", "branches.png")},
     groups = {leaves = 1, leafdecay = 1,flammable=1},
     sounds = main.grassSound(),
     drop = {

@@ -422,7 +422,7 @@ local set_item = function(self, item)
 	itemname = stack:is_known() and stack:get_name() or "unknown"
 
 	def = minetest.registered_nodes[itemname]
-	tooldef = minetest.registered_tools[itemname]
+	local tooldef = minetest.registered_tools[itemname]
 
 	self.object:set_properties({
 		textures = {itemname},

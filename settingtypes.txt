@@ -1,0 +1,2 @@
+# The season to be used ingame (only affects audiovisuals). If set to reallife the season will be set to the real life season when the server starts. Set to summer to disable season effects.
+season (Season) enum reallife reallife,spring,summer,autumn,winter

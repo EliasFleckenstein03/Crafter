@@ -417,7 +417,7 @@ end
 
 minetest.register_node("weather:snow", {
     description = "Snow",
-    tiles = {"snow_block.png"},
+    tiles = {"snow.png"},
     groups = {pathable = 1,snow = 1, falling_node=1},
     sounds = main.woolSound(),
     paramtype = "light",
@@ -456,7 +456,7 @@ minetest.register_node("weather:snow", {
 
 minetest.register_node("weather:snow_block", {
     description = "Snow",
-    tiles = {"snow_block.png"},
+    tiles = {"snow.png"},
     groups = {pathable = 1,snow = 1},
     sounds = main.woolSound(),
     drop = {

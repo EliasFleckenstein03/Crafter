@@ -1,6 +1,6 @@
 <img src="https://github.com/EliasFleckenstein03/Crafter/blob/master/menu/header.png">
 
-> Designed for Minetest 5.3.0-DEV
+> Designed for Minetest 5.3.0
 
 >Built using textures from <a href="https://forum.minetest.net/viewtopic.php?t=16407">Mineclone 2</a> 
 
@@ -35,6 +35,8 @@ max_packets_per_iteration = 10096
 ## Alpha 0.07
 > RailRoad Tech
 
+- Seasons
+- Better 3rd persion visuals
 - Warning when clientmod is not installed
 - Bucket sounds
 - Inventory improvements

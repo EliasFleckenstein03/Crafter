@@ -81,7 +81,7 @@ minetest.register_plant("grass", {
 	climbable = false,
 	paramtype = "light",
 	is_ground_content = false,
-    tiles = {"tallgrass.png"},
+    tiles = {season.pick("tallgrass_spring.png", "tallgrass.png", "tallgrass_autumn.png", "tallgrass_winter.png")},
     paramtype2 = "degrotate",
     buildable_to = true,
     sunlight_propagates = true,
